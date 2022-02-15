@@ -28,8 +28,29 @@ main{
     background-color: #7FFFD4;
     padding: 20px;
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
     height: 40px;
+}
+
+main .grid-wrapper{
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.grid-wrapper .square{
+    /* width: calc(100% / 7);
+    height: calc(100% / 7); */
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
