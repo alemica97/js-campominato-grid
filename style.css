@@ -37,21 +37,28 @@ footer{
     height: 40px;
 }
 
+.instruction.active{
+    display: none;
+}
+
 main .grid-wrapper{
+    display: none;
+}
+
+main .grid-wrapper.active{
     width: 600px;
     height: 600px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
-    
     flex-wrap: wrap;
 }
 
 .grid-wrapper .square{
-    /* width: calc(100% / 9);
-    height: calc(100% / 9); */
     border: 1px solid black;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    font-weight: 500;
 }
