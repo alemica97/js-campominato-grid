@@ -43,11 +43,12 @@ main .grid-wrapper{
     border: 1px solid black;
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .grid-wrapper .square{
-    /* width: calc(100% / 7);
-    height: calc(100% / 7); */
+    width: calc(100% / 7);
+    height: calc(100% / 7); 
     border: 1px solid black;
     display: flex;
     justify-content: center;
