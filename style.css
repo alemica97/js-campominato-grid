@@ -1,3 +1,7 @@
+html{
+    font-family: 'Rubik', sans-serif;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,6 +28,19 @@ header{
     align-items: center;
 }
 
+.title{
+    padding: 5px 15px;
+}
+
+.level{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    column-gap: 10px;
+}
+
 main{
     background-color: #7FFFD4;
     padding: 20px;
@@ -41,13 +58,41 @@ footer{
     display: none;
 }
 
+select, .btn{
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+select{
+    background-color: #6495ED;
+    color: white;
+}
+
+.btn{
+    background-color: antiquewhite;
+}
+
+select:hover{
+    transform: scale(1.03, 1.03);
+    transition: all 300ms;
+}
+
+.btn:hover{
+    transform: scale(1.03, 1.03);
+    background-color: #6495ED;
+    color: white;
+    transition: all 300ms;
+}
+
 main .grid-wrapper{
     display: none;
 }
 
 main .grid-wrapper.active{
-    width: 600px;
-    height: 600px;
+    width: 60vh;
+    height: 60vh;
     /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
@@ -61,4 +106,9 @@ main .grid-wrapper.active{
     align-items: center;
     font-size: 20px;
     font-weight: 500;
+}
+
+.square:hover{
+    font-size: 25px;
+    transition: all 300ms;
 }

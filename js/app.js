@@ -11,8 +11,8 @@ console.log(gridWrapper);
 const instruction = document.querySelector('.instruction');
 console.log(instruction);
 //Salvo i div con classe square creati a riga 23 in una variabile
-const quadrato = document.getElementsByClassName('square');
-console.log(quadrato);
+const squareElement = document.getElementsByClassName('square');
+console.log(squareElement);
 
 //faccio una funzione che dato un numero ritorna un array con n DIV ed n Numeri
 function squaresGenerator(num){
@@ -38,7 +38,7 @@ function squaresNumber(nRows, nCols){
     let squaresNumber = nRows * nCols;
     return squaresNumber;
 }
-
+//funzione che invocata, al click colora lo sfondo dei div class="square" di blu
 function clickBackground(num){
     
     for(let i = 0; i < num.length; i++){
@@ -46,14 +46,11 @@ function clickBackground(num){
         prova = num[i];
         prova.addEventListener('click', function(){
             prova.style.backgroundColor = '#6495ED';
+            prova.style.transition = '500ms';
         })
     }
 }
 
-// let squareArray = [];
-// let rows = 0;
-// let columns = 0;
-// console.log(`ci sono ${squaresNumber} quadrati`);
 let level;
 let squares;
 
@@ -70,19 +67,19 @@ playButton.addEventListener('click', function(){
             console.log('hai scelto easy');
             squares = squaresNumber(7,7);
             squaresGenerator(squares);
-            clickBackground(quadrato);
+            clickBackground(squareElement);
             break;
         case 'medium':
             console.log('hai scelto medium');
             squares = squaresNumber(9,9);
             squaresGenerator(squares);
-            clickBackground(quadrato);
+            clickBackground(squareElement);
             break;
         case 'difficult':
             console.log('hai scelto difficult');
             squares = squaresNumber(10,10);
             squaresGenerator(squares);
-            clickBackground(quadrato);
+            clickBackground(squareElement);
             break;
     }
 
