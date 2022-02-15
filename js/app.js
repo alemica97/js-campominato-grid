@@ -11,7 +11,7 @@ console.log(playButton);
 //faccio una funzione che dato un numero ritorna un array con n DIV ed n Numeri
 function squaresGenerator(num){
 
-    let square
+    let square;
     const root = Math.sqrt(num);
     for(let i = 1; i <= num; i++){
         square = document.createElement('div');
@@ -23,6 +23,7 @@ function squaresGenerator(num){
         all'aumentare di righe e colonne*/
         square.style.width = `calc( 100% / ${root})`;
         square.style.height = `calc( 100% / ${root})`;
+
     }
     
     return square;
@@ -40,7 +41,6 @@ function squaresNumber(row,col){
 // console.log(`ci sono ${squaresNumber} quadrati`);
 let level;
 let squares;
-
 
 playButton.addEventListener('click', function(){
 
