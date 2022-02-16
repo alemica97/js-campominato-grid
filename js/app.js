@@ -31,7 +31,7 @@ function squaresGenerator(num){
         square.style.height = `calc( 100% / ${root})`;
     }
     
-    return square;
+    // return square;
 }
 //funzione che dati come parametri righe e colonne, restituisce il numero di quadrati
 function squaresNumber(nRows, nCols){
@@ -45,14 +45,14 @@ function clickBackground(num){
         let prova;
         prova = num[i];
         prova.addEventListener('click', function(){
+            // console.log('prova');
             prova.style.backgroundColor = '#6495ED';
             prova.style.transition = '500ms';
         })
     }
 }
 
-let level;
-let squares;
+let level, squares;
 
 playButton.addEventListener('click', function(){
 
@@ -65,7 +65,8 @@ playButton.addEventListener('click', function(){
     switch(level){
         case 'easy':
             console.log('hai scelto easy');
-            squares = squaresNumber(7,7);
+            squares = squaresNumber(10,10);
+            
             squaresGenerator(squares);
             clickBackground(squareElement);
             break;
@@ -77,7 +78,7 @@ playButton.addEventListener('click', function(){
             break;
         case 'difficult':
             console.log('hai scelto difficult');
-            squares = squaresNumber(10,10);
+            squares = squaresNumber(7,7);
             squaresGenerator(squares);
             clickBackground(squareElement);
             break;

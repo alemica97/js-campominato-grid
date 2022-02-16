@@ -96,6 +96,7 @@ main .grid-wrapper.active{
     /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
+    user-select: none;
 }
 
 .grid-wrapper .square{
@@ -106,6 +107,7 @@ main .grid-wrapper.active{
     align-items: center;
     font-size: 20px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .square:hover{
